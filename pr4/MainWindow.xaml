@@ -1,0 +1,73 @@
+﻿<Window x:Class="pr4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:pr4"
+        mc:Ignorable="d"
+        Title="MainWindow" MinHeight="600" MinWidth="1100">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label HorizontalAlignment="Stretch" Content="Фрактальное дерево" HorizontalContentAlignment="Center" VerticalAlignment="Stretch"/>
+            <Image Source="Images/tree.jpg" Grid.Row="1"/>
+            <Button Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Создать фрактал" Click="treeClick"/>
+        </Grid>
+        
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label HorizontalAlignment="Stretch" Content="Кривая Коха" HorizontalContentAlignment="Center" VerticalAlignment="Stretch"/>
+            <Image Source="Images/koh.jpeg" Grid.Row="1"/>
+            <Button Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Создать фрактал" Click="KohClick"/>
+        </Grid>
+        
+        <Grid Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label HorizontalAlignment="Stretch" Content="Ковёр Серпинского" HorizontalContentAlignment="Center" VerticalAlignment="Stretch"/>
+            <Image Source="Images/rug.png" Grid.Row="1"/>
+            <Button Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Создать фрактал" Click="RugClick"/>
+        </Grid>
+        
+        <Grid Grid.Column="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label HorizontalAlignment="Stretch" Content="Треугольник Серпинского" HorizontalContentAlignment="Center" VerticalAlignment="Stretch"/>
+            <Image Source="Images/triangle.jpg" Grid.Row="1"/>
+            <Button Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Создать фрактал" Click="triangleClick"/>
+        </Grid>
+
+        <Grid Grid.Column="4">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label HorizontalAlignment="Stretch" Content="Множество Кантора" HorizontalContentAlignment="Center" VerticalAlignment="Stretch"/>
+            <Image Source="Images/kantor.png" Grid.Row="1"/>
+            <Button Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Создать фрактал" Click="kantorClick"/>
+        </Grid>
+    </Grid>
+</Window>
