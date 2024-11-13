@@ -39,28 +39,29 @@ namespace pr4
             try
             {
                 if (level == 0)
-                {
-                    Line line = new Line
-                    {
-                        X1 = x,
-                        Y1 = y,
-                        X2 = x + length,
-                        Y2 = y,
-                        Stroke = (SolidColorBrush)new BrushConverter().ConvertFromString(color),
-                        StrokeThickness = 2
-                    };
+                    return;
 
-                    canv.Children.Add(line);
-                }
-                else
-                {
-                    DrawCantorSet(x, y, length / 3, level - 1, color);
-                    DrawCantorSet(x + 2 * length / 3, y, length / 3, level - 1, color);
-                }
+                DrawLine(x, y, length, color);
+
+                DrawCantorSet(x, length / 3, y + 30, level - 1, color);
+                DrawCantorSet(x + 2 * length / 3, length / 3, y + 30, level - 1, color);
             }
             catch { }
             }
-           
+
+        private void DrawLine(double x, double y, double length, string color)
+        {
+            Line line = new Line
+            {
+                X1 = x,
+                Y1 = y,
+                X2 = x + length,
+                Y2 = y,
+                Stroke = (SolidColorBrush)new BrushConverter().ConvertFromString(color),
+                StrokeThickness = 2
+            };
+            canv.Children.Add(line);
+        }
 
         private void CheckChanged(object sender, RoutedEventArgs e)
         {
