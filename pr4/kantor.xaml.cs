@@ -31,7 +31,7 @@ namespace pr4
             if (green.IsChecked == true) color = "Green";
             if (red.IsChecked == true) color = "Red";
             if (blue.IsChecked == true) color = "Blue";
-            if (int.TryParse(Counttb.Text, out int kol) && kol > 0 && kol < 9) DrawCantorSet(50, 300, 700, kol, color);
+            if (int.TryParse(Counttb.Text, out int kol) && kol > 0 && kol < 13) DrawCantorSet(250, 40, 700, kol, color);
         }
 
         private void DrawCantorSet(double x, double y, double length, int level, string color)
@@ -43,8 +43,8 @@ namespace pr4
 
                 DrawLine(x, y, length, color);
 
-                DrawCantorSet(x, length / 3, y + 30, level - 1, color);
-                DrawCantorSet(x + 2 * length / 3, length / 3, y + 30, level - 1, color);
+                DrawCantorSet(x, y + 30, length / 3, level - 1, color);
+                DrawCantorSet(x + 2 * length / 3, y + 30, length / 3, level - 1, color);
             }
             catch { }
             }
@@ -58,7 +58,7 @@ namespace pr4
                 X2 = x + length,
                 Y2 = y,
                 Stroke = (SolidColorBrush)new BrushConverter().ConvertFromString(color),
-                StrokeThickness = 2
+                StrokeThickness = 5
             };
             canv.Children.Add(line);
         }

@@ -32,7 +32,7 @@ namespace pr4
             if (green.IsChecked == true) color = "Green";
             if (red.IsChecked == true) color = "Red";
             if (blue.IsChecked == true) color = "Blue";
-            if (int.TryParse(Counttb.Text, out int kol) && kol > 0 && kol < 16) DrawAgainColor(500, 400, -90, kol, color);
+            if (int.TryParse(Counttb.Text, out int kol) && kol > 0 && kol < 12) DrawAgainColor(500, 400, -90, kol, color);
         }
 
         private void CheckChanged(object sender, RoutedEventArgs e)

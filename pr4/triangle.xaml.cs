@@ -31,7 +31,7 @@ namespace pr4
             if (green.IsChecked == true) color = "Green";
             if (red.IsChecked == true) color = "Red";
             if (blue.IsChecked == true) color = "Blue";
-            if (int.TryParse(Counttb.Text, out int kol) && kol > 0 && kol < 5) DrawAgainColor(5, new Point(300, 50), new Point(50, 550), new Point(550, 550), kol, color);
+            if (int.TryParse(Counttb.Text, out int kol) && kol > 0 && kol < 9) DrawAgainColor(kol, new Point(500, 0), new Point(250, 450), new Point(750, 450), color);
         }
 
         private void CheckChanged(object sender, RoutedEventArgs e)
@@ -52,27 +52,24 @@ namespace pr4
                 green.IsChecked = false;
             }
         }
-        private void DrawAgainColor(int depth, Point top, Point left, Point right, int kol, string color)
+        private void DrawAgainColor(int depth, Point top, Point left, Point right, string color)
         {
             try
             {
-                if (kol != 0)
+                if (depth == 0)
                 {
-                    if (depth == 0)
-                    {
-                        DrawTriangle(top, left, right, color);
-                    }
-                    else
-                    {
-                        var midLeft = Midpoint(top, left);
-                        var midRight = Midpoint(top, right);
-                        var midBottom = Midpoint(left, right);
-                        kol--;
+                    DrawTriangle(top, left, right, color);
+                }
+                else
+                {
+                    var midLeft = Midpoint(top, left);
+                    var midRight = Midpoint(top, right);
+                    var midBottom = Midpoint(left, right);
+                    depth--;
 
-                        DrawAgainColor(depth - 1, top, midLeft, midRight, kol, color);
-                        DrawAgainColor(depth - 1, left, midLeft, midBottom, kol, color);
-                        DrawAgainColor(depth - 1, right, midRight, midBottom, kol, color);
-                    }
+                    DrawAgainColor(depth, top, midLeft, midRight, color);
+                    DrawAgainColor(depth, left, midLeft, midBottom, color);
+                    DrawAgainColor(depth, right, midRight, midBottom, color);
                 }
             }
             catch { }

@@ -31,7 +31,7 @@ namespace pr4
             if (green.IsChecked == true) color = "Green";
             if (red.IsChecked == true) color = "Red";
             if (blue.IsChecked == true) color = "Blue";
-            if (int.TryParse(Counttb.Text, out int kol) && kol > 0 && kol <= 5) DrawSierpinskiCarpet(0, 0, 500, kol, color);
+            if (int.TryParse(Counttb.Text, out int kol) && kol > 0 && kol <= 5) DrawSierpinskiCarpet(400, 100, 300, kol, color);
         }
         private void DrawSierpinskiCarpet(double x, double y, double size, int level, string color)
         {

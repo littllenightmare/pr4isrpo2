@@ -31,7 +31,7 @@ namespace pr4
             if (green.IsChecked == true) color = "Green";
             if (red.IsChecked == true) color = "Red";
             if (blue.IsChecked == true) color = "Blue";
-            if (int.TryParse(Counttb.Text, out int kol) && kol > 0 && kol < 16) DrawKochCurve(100, 150, 300, 500, kol, color);
+            if (int.TryParse(Counttb.Text, out int kol) && kol > 0 && kol < 7) DrawKochCurve(300, 250, 700, 250, kol, color);
         }
 
         private void DrawKochCurve(double x1, double y1, double x2, double y2, int level, string color)
@@ -62,8 +62,8 @@ namespace pr4
                     double xB = x1 + 2 * dx / 3;
                     double yB = y1 + 2 * dy / 3;
 
-                    double xC = (x1 + x2) / 2 + Math.Sqrt(3) * (y1 - y2) / 6;
-                    double yC = (y1 + y2) / 2 + Math.Sqrt(3) * (x2 - x1) / 6;
+                    double xC = (x1 + x2) / 2 - Math.Sqrt(3) * (y1 - y2) / 6;
+                    double yC = (y1 + y2) / 2 - Math.Sqrt(3) * (x2 - x1) / 6;
 
                     DrawKochCurve(x1, y1, xA, yA, level - 1, color);
 

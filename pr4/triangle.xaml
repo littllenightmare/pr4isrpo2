@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:pr4"
         mc:Ignorable="d"
-        Title="tree" MinHeight="600" MinWidth="1100">
+        Title="triangle" MinHeight="650" MinWidth="1100">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.1*"></RowDefinition>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:pr4"
         mc:Ignorable="d"
-        Title="koh" MinHeight="600" MinWidth="1100">
+        Title="koh" MinHeight="650" MinWidth="1100">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.1*"></RowDefinition>
@@ -16,7 +16,7 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Label Content="Введите количество шагов отрисовки (до 100) ->" FontSize="15" VerticalAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Label Content="Введите количество шагов отрисовки (до 7) ->" FontSize="15" VerticalAlignment="Center" HorizontalContentAlignment="Center"/>
         <TextBox Margin="10,0" Grid.Column="1" x:Name="Counttb" VerticalAlignment="Center" TextChanged="DrawAgain"/>
         <CheckBox Margin="10,0" Content="Красный" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Center" Checked="CheckChanged" x:Name="red"/>
         <CheckBox Content="Синий" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Checked="CheckChanged" x:Name="blue"/>
